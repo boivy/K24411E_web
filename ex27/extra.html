@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Colorado Experience</title>
+    <style>
+        *{margin:0; padding:0; box-sizing:border-box;}
+        body{font-family: Times New Roman;}
+
+        /* HEADER */
+        .header{height:120px;background-image:url('images/LOGO.jpg');background-repeat:no-repeat;background-position:center;background-size:contain;border-bottom:2px solid black;}
+
+        /* CHIA 2 CỘT */
+        .container{display:flex;height:calc(100vh - 120px);}
+
+        /* MENU TRÁI */
+        .sidebar{width:30%;background-image:url('images/Wall2.jpg');padding:20px;}
+
+        .sidebar ul{list-style:none;}
+
+        .sidebar li{margin:10px 0;}
+
+        .sidebar a{text-decoration:none;color:purple;}
+
+        .sidebar ul ul{
+            margin-left:20px;}
+
+        /* IFRAME PHẢI */
+        .content{width:70%;background:beige;}
+
+        iframe{width:100%;height:100%;border:none;}
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header"></div>
+    <!-- NỘI DUNG -->
+    <div class="container">
+        <!-- MENU -->
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="TCE.html" target="main_content">
+                        Home Page
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Philosph.html" target="main_content">
+                        Our Philosophy
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Lessons.html" target="main_content">
+                        Climbing Lessons
+                    </a>
+                </li>
+                <li>
+                    <u>Tours</u>
+                    <ul>
+                        <li>
+                            <a href="Grepon.html" target="main_content">
+                                Petit Grepon
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Lumpy.html" target="main_content">
+                                Lumpy Ridge
+                            </a>
+                        </li>
+                        <li>
+                            <a href="NFace.html" target="main_content">
+                                North Face
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Kieners.html" target="main_content">
+                                Kiener's
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Diamond.html" target="main_content">
+                                The Diamond
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Eldorado.html" target="main_content">
+                                Eldorado
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <u>Staff</u>
+                </li>
+            </ul>
+        </div>
+        <!-- FRAME -->
+        <div class="content">
+            <iframe 
+                name="main_content"
+                src="TCE.html">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
