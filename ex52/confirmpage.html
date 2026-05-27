@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Result Page</title>
+    </head>
+    <body>
+        <div style="width: 700px;
+                margin: auto;
+                background: white;
+                border: 1px solid #ccc;
+                padding: 20px;">
+            <h2 style="color: darkblue;">Information Submitted</h2>
+            <!-- Hiển thị dữ liệu GET -->
+            <script>
+                const params = new URLSearchParams(window.location.search);
+
+                document.write("<p><b>Full Name:</b> " + params.get("fullname") + "</p>");
+
+                document.write("<p><b>Email:</b> " + params.get("email") + "</p>");
+
+                document.write("<p><b>Department:</b> " + params.get("department") + "</p>");
+
+                document.write("<p><b>Title:</b> " + params.get("title") + "</p>");
+
+                document.write("<p><b>Content:</b> " + params.get("content") + "</p>");
+
+            </script>
+        </div>
+    </body>
+</html>
