@@ -1,0 +1,55 @@
+<html> 
+    <head>
+        <title> Tiêu đề trang</title>
+        <script>
+            function solveEquation() 
+            {
+                alert("Solving equation...");
+                var a=eval(myForm.input_a.value);
+                var b=eval(myForm.input_b.value);
+                //aleart("a = " + a);
+                var result ="";
+                if (a == 0) {
+                    if (b == 0) {
+                        result = "infinitely many solutions";
+                    } else {
+                        result = "no solution";
+                    }
+                } else {
+                    result =-b/a;
+                }
+                myForm.input_result1.value = result;
+                //td_result.innerText = result;
+                td_result.innerHTML ="<font color='blue'>" + result + "</font>";
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm">
+            <h1>First Degree Equation</h1>
+            <table>
+                <tr>
+                    <td>a:</td>
+                    <td><input type="text" id="input_a" name="input_a"></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="text" id="input_b" name="input_b" /></td>
+                </tr>
+                <tr>
+                    <td>result way 1:</td>
+                    <td><input type="text" id="input_result1" name="input_result1" readonly /></td>
+                </tr>
+                <tr>
+                    <td>result way 2:</td>
+                    <td id="td_result"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Solve" onclick="solveEquation()" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
