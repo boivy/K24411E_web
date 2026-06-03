@@ -1,0 +1,30 @@
+<html> 
+    <head>
+        <title> Tiêu đề trang</title>
+    </head>
+    <body>
+        <p id="myparagraph">TEST 0</p>
+        <h3 id="mylist"></h3>
+        <script type="text/javascript">
+            // Khai báo mảng dữ liệu
+            var arr = [];
+            for(var j = 1; j <= 100; j++) {
+                arr[j] = + j;
+            }
+            
+            // Cập nhật mylist
+            var mylist = document.getElementById("mylist");
+            var content = "";
+            for(var i=1;i<=100;i++) 
+            {
+                content += arr[i] +"<br/>";
+            }
+            mylist.innerHTML = content;
+            
+            // Cập nhật myparagraph
+            var myparagraph = document.getElementById("myparagraph");
+            myparagraph.innerText = "TEST - Dữ liệu đã cập nhật";
+        </script>
+    </body>
+    
+</html>
