@@ -1,0 +1,48 @@
+<html> 
+    <head>
+        <title> Tiêu đề trang</title>
+        
+    </head>
+    <body>
+        <form name="myform">
+            <p>URI:</p>
+            <input type="text" name="uri" id="uri" maxlength="200" size="100"
+            value="http://www.example.com:80/path/to/file?id=123&name=John#fragment">
+            <button type="button" onclick="getInfo()">Get Information</button>
+            <p>Protocol: <span id="protocol"></span></p>
+            <p>Host: <span id="host"></span></p>
+            <p>Port: <span id="port"></span></p>
+            <p>Id: <span id="query-id"></span></p>
+            <p>Name: <span id="query-name"></span></p>
+        </form>
+        <script>
+            function getInfo() {
+                const uri = document.getElementById("uri").value;
+                try {
+                    const url = new URL(uri);
+                    // Protocol
+                    document.getElementById("protocol").textContent =
+                        url.protocol;
+
+                    // Host
+                    document.getElementById("host").textContent =
+                        url.hostname;
+
+                    // Port
+                    document.getElementById("port").textContent =
+                        url.port || "(mặc định)";
+
+                    // Query parameters
+                    document.getElementById("query-id").textContent =
+                        url.searchParams.get("id") || "";
+
+                    document.getElementById("query-name").textContent =
+                        url.searchParams.get("name") || "";
+                }
+                catch (error) {
+                    alert("URL không hợp lệ!");
+                }
+            }
+        </script>
+    </body>
+</html>
