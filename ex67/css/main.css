@@ -1,0 +1,20 @@
+table{
+    border-collapse: collapse;
+    width: 700px;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th{
+    background-color: #b0dda5;
+    cursor: pointer;
+}
+.title{
+    background-color: yellow;
+}
+tr:hover{
+    cursor: pointer;
+}
